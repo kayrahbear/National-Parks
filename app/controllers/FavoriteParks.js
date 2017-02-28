@@ -10,8 +10,7 @@ app.controller("FavoriteParks", function($scope, ParkStorage, AuthFactory){
     });
 
     $scope.itemDelete = function(itemId){
-        $scope.itemId = this.id;
-        console.log("delete this item", $scope.itemId);
+        console.log("delete this item", itemId);
         ParkStorage.deleteFavorite(itemId)
         .then(function(response){
             ParkStorage.getUserParks(user).then(function(itemCollection){
