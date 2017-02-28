@@ -1,0 +1,11 @@
+<h1 class="searchTitle">National Parks</h1>
+
+<div ng-repeat="item in parks">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-xs-3">{{item.Name}}</div>
+            <div class="col-xs-7">{{item.Description}}</div>
+            <div class="col-xs-1"><button class="btn btn-success"><a ng-href="#!/parks/{{item.id}}">View Park</a></button></div>
+        </div>
+    </div>
+</div>
